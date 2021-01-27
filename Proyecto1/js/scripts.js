@@ -3,6 +3,7 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
     */
+   var listaUsuarios=[];
     (function($) {
     "use strict"; // Start of use strict
   
@@ -68,7 +69,7 @@
   })(jQuery); // End of use strict
   
   //var Usuario = new Object();
-  var listaUsuarios=[];
+
   
   function Usuario(nombre,email,telefono,mensaje){
     this.nombre = nombre;
@@ -76,7 +77,6 @@
     this.telefono = telefono;
     this.mensaje = mensaje;
   }
-  var aux = new Usuario();
   
 function contacto()
 {
@@ -87,9 +87,8 @@ function contacto()
 
   aux  = new Usuario(nombre,mail,tel,msg);
 
-  usuarios.push(u);
-  console.log(usuarios);
-
-
+  listaUsuarios.push(aux);
+  alert("Gracias "+nombre+" por contactarte con nosotros");
+  console.log(listaUsuarios);
 }
 
